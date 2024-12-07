@@ -1,0 +1,264 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll; /* The dimensions of 1 notebook page */
+  z-index: -1; /* The element that is furthest back */
+}
+
+.background image {
+  width: 100%;
+  height: auto;
+}
+
+.header-content {
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  background-color: #000;
+}
+
+.profile-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.museum-title {
+  max-width: 90px;
+  height: auto;
+}
+
+.toolbar-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 0;
+  width: 500px;
+  z-index: 0; /* A step above the background image */
+}
+
+.toolbar-base-image {
+  display: block; /* I wanted my toolbar image to stretch to the full width of my toolbar container */
+  width: 100%;
+}
+
+.toolbar-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers my elements horizontally and vertically within the toolbar container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.toolbar-icon-wrapper { /* For stylizing my container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 30px;
+}
+
+/* All of my icon measurements */
+.pen-icon,
+.eraser-icon,
+.sticker-icon,
+.camera-icon,
+.select-icon {
+  width: 5%;
+}
+
+.toolbar-icon {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.popdown {
+  display: none;
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%); /* Precise dropdown from previous toolbar */
+  padding: 10px;
+  width: 500px;
+  z-index: -1;
+}
+
+.popdown-image {
+  display: block;
+  width: 100%;
+}
+
+.popdown-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  z-index: 3; /* Increased the z-index value to position the icons above the popdown */
+}
+
+.popdown-icon-group {
+  display: flex;
+  align-items: center;
+  z-index: 4; /* Add a higher z-index value to the icon groups */
+}
+
+/* Groups of my different functionalites, like the colors, pen size, and type of brush */
+.popdown-icon-group.left {
+  justify-content: flex-start;
+}
+
+.popdown-icon-group.middle {
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.popdown-icon-group.right {
+  justify-content: flex-end;
+}
+
+.popdown-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.popdown-size-flow-icon {
+  width: 40%;
+  height: auto;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.pensize-icon {
+  width: 85%;
+  height: auto;
+}
+
+.bottom-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+}
+
+.bottom-icon-wrapper { /* For stylizing my container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+}
+
+.accessibility-image { /* Background of my add page, share, and questions */
+  position: fixed;
+  bottom: 5px;
+  right: 20px;
+  width: 72px;
+  height: 236px;
+  cursor: pointer;
+  padding: 20px;
+  z-index: -1;
+}
+
+.bottom-icons-container {
+  position: fixed; 
+  bottom: 35px; 
+  right: -23px; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: 20px; 
+}
+
+.bottom-icon-wrapper {
+  margin: 20px 0; 
+  cursor: pointer; 
+}
+
+.addnewpage-icon,
+.share-icon,
+.question-icon {
+  width: 15%; 
+}
+
+.bottom-icon {
+  width: 100%;
+  height: auto; 
+  cursor: pointer; 
+}
+
+/* Additional tweaking of the pop up place holder and submission button */
+
+#share-message {
+  position: fixed; 
+  bottom: 50px; 
+  right: 130px; 
+  z-index: 1000; 
+  display: none; 
+}
+
+#share-message form {
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
+}
+
+#share-message input {
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+#share-message button {
+  padding: 10px; 
+  background-color: #E3420E;
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+#share-message button:hover {
+  background-color: #000000; 
+}

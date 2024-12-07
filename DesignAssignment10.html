@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>The Museum</title>
+  <link rel="stylesheet" href="DesignAssignment10.css">
+</head>
+
+<body>
+  <div class="background">
+    <img src="background.png" alt="Background Image">
+  </div>
+
+  <div class="header-content">
+    <div class="header">
+      <div class="icons">
+        <a href="#" onclick="openRandomLink()">
+          <img src="home.svg" alt="Home Icon" class="icon">
+        </a>
+      </div>
+      <img src="title.png" alt="The Museum" class="museum-title">
+      <a href="#" onclick="openRandomLink()">
+        <img src="profilephoto.jpg" alt="Profile Picture" class="profile-photo">
+      </a>
+    </div>
+    
+    <div class="toolbar-container">
+      <img src="toolbar.png" alt="Toolbar" class="toolbar-base-image">
+      <div class="toolbar-icons">
+        <div class="toolbar-icon-wrapper pen-icon">
+          <img src="pen.png" alt="Pen" class="toolbar-icon" onclick="togglePopdown()">
+        </div>
+        <div class="toolbar-icon-wrapper eraser-icon">
+          <img src="eraser.png" alt="Eraser" class="toolbar-icon" onclick="changeIcon(this, 'eraser-pink.png'); togglePopdown();">
+        </div>
+        <div class="toolbar-icon-wrapper sticker-icon">
+          <a href="#" onclick="openRandomLink()">
+            <img src="sticker.png" alt="Sticker" class="toolbar-icon" onclick="changeIcon(this, 'sticker-yellow.png')">
+          </a>
+        </div>
+        <div class="toolbar-icon-wrapper camera-icon">
+          <a href="#" onclick="openRandomLink()">
+            <img src="camera.png" alt="Camera" class="toolbar-icon" onclick="changeIcon(this, 'camera-grey.png')">
+          </a>        
+        </div>
+        <div class="toolbar-icon-wrapper select-icon">
+          <img src="select.png" alt="Select" class="toolbar-icon" onclick="changeIcon(this, 'select-blue.png')">
+        </div>
+      </div>
+      </div>
+    </div>
+    
+    <div id="popdown" class="popdown">
+      <img src="toolbarpopup.png" alt="Popdown" class="popdown-image">
+      <div class="popdown-icons">
+        <div class="popdown-icon-group left">
+          <img src="yellow.png" alt="Yellow" class="popdown-icon" onclick="changePenColor(this, 'pen-yellow.png'); toggleColor(this, 'yellow');">
+          <img src="orange.png" alt="Orange" class="popdown-icon" onclick="changePenColor(this, 'pen-orange.png'); toggleColor(this, 'orange');">
+          <img src="blue.png" alt="Blue" class="popdown-icon" onclick="changePenColor(this, 'pen-blue.png'); toggleColor(this, 'blue');">
+        </div>
+        <div class="popdown-icon-group middle"> 
+          <img src="pensize.png" alt="Pen Size" class="popdown-size-flow-icon pensize-icon" onclick="changePenSize(this, 'pensize-click.png')"> 
+        </div>
+        <div class="popdown-icon-group right">
+          <img src="fluid.png" alt="Fluid" class="popdown-size-flow-icon" onclick="changeFlowType(this, 'fluid-click.png')"> 
+          <img src="broken.png" alt="Broken" class="popdown-size-flow-icon" onclick="changeFlowType(this, 'broken-click.png')">
+        </div>
+      </div>
+    </div>
+    
+    <div class="bottom-icons-container">
+      <div class="bottom-icon-wrapper addnewpage-icon">
+        <a href="#" onclick="openRandomLink()">
+          <img src="addnewpage.png" alt="Add New Page" class="bottom-icon">
+        </a>
+      </div>
+      <div class="bottom-icon-wrapper share-icon">
+          <img src="share.png" alt="Share" class="bottom-icon" onclick="toggleShareMessage()">
+      </div>
+      <div class="bottom-icon-wrapper question-icon">
+        <a href="#" onclick="openRandomLink()">
+          <img src="question.png" alt="Question" class="bottom-icon">
+        </a>
+      </div>
+  </div>
+  
+  <div id="share-message" style="display: none;">
+      <form onsubmit="return false;"> 
+        <input type="text" placeholder="Sender Email" required>
+        <input type="text" placeholder="Recipient Email" required>
+        <button type="button" onclick="sendMessage()">Send</button>
+      </form>
+  </div>
+    <img src="accessibility.png" alt="Accessibility" class="accessibility-image">
+  </div>
+  
+  <script src="DesignAssignment10.js"></script>
+</body>
+
+</html>
